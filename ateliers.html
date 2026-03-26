@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ateliers — Mission Bretonne · Ti ar Vretoned</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="brand">Mission Bretonne</span>
+      <span class="brand-sub">Ti ar Vretoned · Paris</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="presentation.html">L'association</a></li>
+      <li><a href="ateliers.html" class="active">Ateliers</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="adhesion.html">Adhérer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="adhesion.html" class="btn btn-primary nav-cta" style="margin-left:8px">S'inscrire</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background:linear-gradient(135deg,rgba(28,43,74,.95) 0%,rgba(45,66,112,.7) 100%),url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1400&q=80') center/cover no-repeat"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="eyebrow">Saison 2025–2026</div>
+        <h1>Ateliers</h1>
+        <p>Collectifs, mixtes, ouverts à tous les âges. De mi-septembre à fin juin, par l'oreille.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO ATELIERS -->
+  <section class="section--sm section--cream" style="padding:56px 0">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm)">
+          <div style="font-size:2rem;margin-bottom:10px">📅</div>
+          <h4 style="color:var(--navy);margin-bottom:6px;font-size:.95rem">Mi-sept. à fin juin</h4>
+          <p style="color:var(--text-light);font-size:.82rem">Année scolaire, avec pause durant les vacances.</p>
+        </div>
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm)">
+          <div style="font-size:2rem;margin-bottom:10px">👂</div>
+          <h4 style="color:var(--navy);margin-bottom:6px;font-size:.95rem">Apprentissage par l'oreille</h4>
+          <p style="color:var(--text-light);font-size:.82rem">Méthode traditionnelle, sans partition obligatoire.</p>
+        </div>
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm)">
+          <div style="font-size:2rem;margin-bottom:10px">👥</div>
+          <h4 style="color:var(--navy);margin-bottom:6px;font-size:.95rem">Groupes de ~10 élèves</h4>
+          <p style="color:var(--text-light);font-size:.82rem">Cours collectifs mixtes, pour tous les âges.</p>
+        </div>
+        <div style="background:var(--navy);border-radius:var(--radius-md);padding:28px;text-align:center">
+          <div style="font-size:2rem;margin-bottom:10px">🎓</div>
+          <h4 style="color:var(--gold);margin-bottom:6px;font-size:.95rem">Session d'essai</h4>
+          <p style="color:rgba(255,255,255,.65);font-size:.82rem">Possibilité d'assister à un cours avant de s'inscrire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIQUE -->
+  <section class="section" id="musique">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Ateliers</span>
+        <h2>Musique bretonne</h2>
+        <p>Tous les instruments du répertoire traditionnel breton, enseignés de débutant à avancé.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-3">
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🪗</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Accordéon diatonique</h3>
+              <span class="tag tag-gold" style="font-size:.65rem">Débutant · Intermédiaire · Avancé</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7;margin-bottom:20px">
+              L'instrument roi de la musique bretonne. Des cours pour tous les niveaux, de la première note
+              au répertoire de fest-noz. Apprentissage principalement par l'oreille.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0;border-bottom:1px solid var(--cream-dark)">
+                <span style="color:var(--text-light)">Débutant</span>
+                <span style="color:var(--navy);font-weight:600">Aucun prérequis</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0;border-bottom:1px solid var(--cream-dark)">
+                <span style="color:var(--text-light)">Intermédiaire</span>
+                <span style="color:var(--navy);font-weight:600">1 an débutant</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0">
+                <span style="color:var(--text-light)">Avancé</span>
+                <span style="color:var(--navy);font-weight:600">1 an intermédiaire</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,var(--green) 0%,#3a7a52 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🎵</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Biniou & Bombarde</h3>
+              <span class="tag" style="background:rgba(255,255,255,.2);color:white;font-size:.65rem">Le couple traditionnel breton</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7;margin-bottom:20px">
+              Le biniou koz et la bombarde forment le couple emblématique de la musique bretonne traditionnelle.
+              Cours séparés et en duo, pour retrouver cette sonorité unique.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0;border-bottom:1px solid var(--cream-dark)">
+                <span style="color:var(--text-light)">Biniou koz</span>
+                <span style="color:var(--navy);font-weight:600">Tous niveaux</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0;border-bottom:1px solid var(--cream-dark)">
+                <span style="color:var(--text-light)">Bombarde</span>
+                <span style="color:var(--navy);font-weight:600">Tous niveaux</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0">
+                <span style="color:var(--text-light)">Duo biniou/bombarde</span>
+                <span style="color:var(--navy);font-weight:600">Intermédiaire+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,#5C4A8A 0%,#7A63B0 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🎻</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Violon</h3>
+              <span class="tag" style="background:rgba(255,255,255,.2);color:white;font-size:.65rem">Tous niveaux</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7;margin-bottom:20px">
+              Le violon occupe une place centrale dans la musique traditionnelle bretonne. Cours axés sur le
+              répertoire breton et les techniques d'improvisation dans les rondes.
+            </p>
+            <div style="background:var(--gold-pale);border-radius:var(--radius-sm);padding:12px 16px;font-size:.82rem;color:#8A6A10">
+              💡 Tarifs identiques à l'accordéon diatonique depuis 2025–2026.
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,#B85C38 0%,#D4774F 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🎶</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Flûte traversière</h3>
+              <span class="tag" style="background:rgba(255,255,255,.2);color:white;font-size:.65rem">Tous niveaux</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7">
+              La flûte traversière dans le répertoire breton et irlandais. Cours collectifs pour apprendre
+              les ornements et mélodies traditionnelles de Bretagne.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,#2C5F6A 0%,#3D7F8C 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🪈</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Cornemuse & Clarinette</h3>
+              <span class="tag" style="background:rgba(255,255,255,.2);color:white;font-size:.65rem">Tous niveaux</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7">
+              Cornemuse (great highland bagpipe) et clarinette dans les musiques traditionnelles.
+              Cours individualisés en groupe pour progresser à votre rythme.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition)" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="background:linear-gradient(135deg,#8A5A9A 0%,#A87AB8 100%);padding:32px;display:flex;align-items:center;gap:16px">
+            <span style="font-size:2.8rem">🎵</span>
+            <div>
+              <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:4px">Harpe</h3>
+              <span class="tag" style="background:rgba(255,255,255,.2);color:white;font-size:.65rem">Tous niveaux</span>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.7">
+              La harpe celtique, instrument millénaire de la tradition bretonne. Cours pour débutants
+              et confirmés dans un répertoire varié et accessible.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DANSE -->
+  <section class="section section--cream" id="danse">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Ateliers</span>
+        <h2>Danse bretonne</h2>
+        <p>Rondes, gavottes, gigues — apprendre à danser pour les soirées fest-noz.</p>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+        <div>
+          <div style="background:var(--navy);border-radius:var(--radius-md);padding:40px;color:white;margin-bottom:24px">
+            <div style="font-size:3rem;margin-bottom:16px">💃</div>
+            <h3 style="color:var(--gold);margin-bottom:12px;font-size:1.3rem">Danse bretonne — Adultes</h3>
+            <p style="color:rgba(255,255,255,.75);font-size:.92rem;line-height:1.75;margin-bottom:20px">
+              Cours pour adultes de tous niveaux. Apprenez les danses traditionnelles bretonnes :
+              gavotte, an dro, hanter dro, ridée, kas a barh et bien d'autres.
+            </p>
+            <p style="color:rgba(255,255,255,.75);font-size:.92rem;line-height:1.75">
+              L'objectif : pouvoir participer aux fest-noz en confiance et dans la joie,
+              en comprenant les musiques qui les accompagnent.
+            </p>
+          </div>
+          <div style="background:var(--gold-pale);border-radius:var(--radius-md);padding:24px">
+            <h4 style="color:var(--navy);margin-bottom:8px">🎯 Objectif fest-noz</h4>
+            <p style="color:var(--text-light);font-size:.88rem;line-height:1.7">
+              Les cours de danse sont directement liés aux soirées fest-noz organisées à la Mission
+              et dans toute l'Île-de-France. Danser en cercle, en chaîne, à deux ou en groupe.
+            </p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <h3 style="color:var(--navy);margin-bottom:8px">Les danses au programme</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            {["An dro","Hanter dro","Gavotte","Ridée","Kas a barh","Plinn","Jabadao","Laridé"].map(d =>
+            `<div style="background:var(--white);border-radius:var(--radius-sm);padding:14px 16px;font-size:.88rem;color:var(--navy);font-weight:500;border-left:3px solid var(--gold);box-shadow:var(--shadow-sm)">🎵 ${d}</div>`
+            ).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUE & CHANT -->
+  <section class="section" id="langue">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Ateliers</span>
+        <h2>Langue, Chant & Contes</h2>
+        <p>La tradition orale bretonne dans toute sa richesse — parler, chanter, raconter.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-3">
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:36px;box-shadow:var(--shadow-sm);border-top:4px solid var(--gold)">
+          <div style="font-size:2.5rem;margin-bottom:16px">🗣️</div>
+          <h3 style="color:var(--navy);margin-bottom:12px">Langue bretonne</h3>
+          <p style="color:var(--text-light);font-size:.9rem;line-height:1.75;margin-bottom:16px">
+            Cours de langue bretonne pour tous les niveaux. Apprendre à parler, comprendre et
+            transmettre le breton — une langue vivante qui a besoin de vous.
+          </p>
+          <span class="tag tag-gold">Débutant à avancé</span>
+        </div>
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:36px;box-shadow:var(--shadow-sm);border-top:4px solid var(--green)">
+          <div style="font-size:2.5rem;margin-bottom:16px">🎤</div>
+          <h3 style="color:var(--navy);margin-bottom:12px">Kan ha diskan</h3>
+          <p style="color:var(--text-light);font-size:.9rem;line-height:1.75;margin-bottom:16px">
+            Le chant à répondre breton — une tradition vocale unique où deux chanteurs se répondent
+            en improvisant sur des airs traditionnels. L'âme sonore du fest-noz.
+          </p>
+          <span class="tag tag-green">Tradition vocale</span>
+        </div>
+        <div style="background:var(--white);border-radius:var(--radius-md);padding:36px;box-shadow:var(--shadow-sm);border-top:4px solid var(--navy-light)">
+          <div style="font-size:2.5rem;margin-bottom:16px">🎙️</div>
+          <h3 style="color:var(--navy);margin-bottom:12px">Chant gallo & Contes</h3>
+          <p style="color:var(--text-light);font-size:.9rem;line-height:1.75;margin-bottom:16px">
+            Le gallo, langue romane de Bretagne, avec ses chants particuliers. Et les contes bretons —
+            légendes, récits et tradition orale vivante.
+          </p>
+          <span class="tag tag-blue">Gallo · Tradition orale</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIPTION CTA -->
+  <div class="banner-cta">
+    <div class="container">
+      <h2>Prêt à vous inscrire ?</h2>
+      <p>Session d'essai possible dans la plupart des ateliers. Adhésion annuelle 20€ + tarif de l'atelier.</p>
+      <div class="actions">
+        <a href="adhesion.html" class="btn btn-primary">Voir les tarifs 2025–2026</a>
+        <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">Mission Bretonne</span>
+          <span class="brand-sub">Ti ar Vretoned · Depuis 1947</span>
+          <p>22 rue Delambre, 75014 Paris · 01 43 35 26 41</p>
+          <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Ateliers</h4>
+          <ul>
+            <li><a href="#musique">Musique bretonne</a></li>
+            <li><a href="#danse">Danse bretonne</a></li>
+            <li><a href="#langue">Langue & Chant</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>L'association</h4>
+          <ul>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="adhesion.html">Adhérer</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous écrire</a></li>
+            <li><a href="contact.html#acces">Accès</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mission Bretonne – Ti ar Vretoned · 22 rue Delambre, 75014 Paris</span>
+        <span>Pôle associé <a href="#">Dastum</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    function toggleMenu() { document.body.classList.toggle('nav-mobile-open'); }
+  </script>
+</body>
+</html>

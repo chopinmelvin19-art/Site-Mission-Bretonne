@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Bretonne — Ti ar Vretoned · Vivre la culture bretonne à Paris</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="brand">Mission Bretonne</span>
+      <span class="brand-sub">Ti ar Vretoned · Paris</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="presentation.html">L'association</a></li>
+      <li><a href="ateliers.html">Ateliers</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="adhesion.html">Adhérer</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="adhesion.html" class="btn btn-primary nav-cta" style="margin-left:8px">S'inscrire</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Depuis 1947 · Paris</div>
+        <h1>Vivre la culture<br><em>bretonne à Paris</em></h1>
+        <p class="hero-tagline">Bevañ sevenadur Breizh e Pariz</p>
+        <p class="hero-desc">
+          Lieu d'accueil, de convivialité, de culture et de fête. La Mission Bretonne rassemble
+          les passionnés de la Bretagne au cœur du 14e arrondissement — danse, musique,
+          langue et mémoire.
+        </p>
+        <div class="hero-actions">
+          <a href="ateliers.html" class="btn btn-primary">Découvrir les ateliers</a>
+          <a href="agenda.html" class="btn btn-outline">Voir l'agenda →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="container">
+        <div class="stat-item">
+          <span class="stat-num">1947</span>
+          <span class="stat-label">Fondée en</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Ateliers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">400+</span>
+          <span class="stat-label">Visiteurs / semaine</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">20€</span>
+          <span class="stat-label">Cotisation annuelle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+        <div>
+          <span class="eyebrow" style="color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:12px">Notre mission</span>
+          <h2 style="color:var(--navy);margin-bottom:20px">Un espace unique dédié à la Bretagne</h2>
+          <p style="color:var(--text-light);margin-bottom:20px;line-height:1.8">
+            Depuis plus de 75 ans, la Mission Bretonne accueille les Bretons arrivant à Paris et
+            tous ceux qui souhaitent découvrir, partager ou transmettre la culture bretonne.
+            Nichée au fond d'une cour intérieure du 14e, elle vibre chaque semaine au son des
+            bombardes, des harpes et des chants traditionnels.
+          </p>
+          <p style="color:var(--text-light);margin-bottom:36px;line-height:1.8">
+            <em style="font-family:var(--font-serif);color:var(--navy)">"La culture n'est rien sans la rencontre de l'autre et sans l'échange, le partage, la convivialité."</em>
+          </p>
+          <a href="presentation.html" class="btn btn-outline-dark">En savoir plus sur l'association</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:var(--navy);border-radius:var(--radius-md);padding:32px;color:white;grid-column:1/-1">
+            <div style="font-size:2.5rem;margin-bottom:12px">🎶</div>
+            <h3 style="color:white;margin-bottom:8px;font-size:1.15rem">Musique & Danse</h3>
+            <p style="color:rgba(255,255,255,.65);font-size:.88rem">Fest-noz, fest-deiz, sessions irlandaises et bretonnes tout au long de l'année.</p>
+          </div>
+          <div style="background:var(--cream-dark);border-radius:var(--radius-md);padding:28px">
+            <div style="font-size:2rem;margin-bottom:10px">🗣️</div>
+            <h3 style="color:var(--navy);margin-bottom:6px;font-size:1rem">Langue bretonne</h3>
+            <p style="color:var(--text-light);font-size:.82rem">Cours de breton pour tous les niveaux.</p>
+          </div>
+          <div style="background:var(--gold-pale);border-radius:var(--radius-md);padding:28px">
+            <div style="font-size:2rem;margin-bottom:10px">📚</div>
+            <h3 style="color:var(--navy);margin-bottom:6px;font-size:1rem">Mémoire & Archives</h3>
+            <p style="color:var(--text-light);font-size:.82rem">Pôle associé Dastum, éditions et patrimoine breton.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATELIERS HIGHLIGHTS -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Ateliers 2025–2026</span>
+        <h2>Un atelier pour chacun</h2>
+        <p>Collectifs, mixtes, ouverts à tous les âges — de mi-septembre à fin juin. Apprentissage principalement par l'oreille.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-4">
+        <div class="workshop-card">
+          <div class="workshop-icon">🪗</div>
+          <span class="workshop-tag">Musique</span>
+          <h3>Accordéon diatonique</h3>
+          <p>Débutant, intermédiaire et avancé. L'instrument emblématique de la musique bretonne.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">🎵</div>
+          <span class="workshop-tag">Musique</span>
+          <h3>Biniou & Bombarde</h3>
+          <p>Le couple traditionnel breton par excellence. Cours adaptés à chaque niveau.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">🎻</div>
+          <span class="workshop-tag">Musique</span>
+          <h3>Violon & Harpe</h3>
+          <p>Deux cordes, deux âmes musicales au cœur de la tradition celtique.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">💃</div>
+          <span class="workshop-tag">Danse</span>
+          <h3>Danse bretonne</h3>
+          <p>Adultes de tous niveaux. Rondes, chaînes et fest-noz dans la joie.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">🎙️</div>
+          <span class="workshop-tag">Chant</span>
+          <h3>Kan ha diskan</h3>
+          <p>Le chant à répondre breton — une tradition vocale unique et vivante.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">🗣️</div>
+          <span class="workshop-tag">Langue</span>
+          <h3>Breton</h3>
+          <p>Cours de langue bretonne pour apprendre, pratiquer et transmettre.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">🎶</div>
+          <span class="workshop-tag">Musique</span>
+          <h3>Flûte & Clarinette</h3>
+          <p>Flûte traversière et clarinette dans le répertoire de musique bretonne.</p>
+        </div>
+        <div class="workshop-card">
+          <div class="workshop-icon">📖</div>
+          <span class="workshop-tag">Contes</span>
+          <h3>Contes & Chant gallo</h3>
+          <p>Traditions orales, légendes et chant gallo — la Bretagne en mots.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px">
+        <a href="ateliers.html" class="btn btn-outline-dark">Voir tous les ateliers et tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Agenda</span>
+        <h2>Prochains événements</h2>
+        <p>Sessions, fest-noz, concerts, stages et repas bretons — la vie culturelle ne s'arrête jamais.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-3" style="margin-bottom:48px">
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">27</div>
+            <div class="month">Mars</div>
+          </div>
+          <div class="event-info">
+            <h3>Session Bretonne</h3>
+            <p>Séance musicale informelle ouverte à tous les musiciens et amateurs.</p>
+            <div class="event-meta">
+              <span>🕗 20h30</span>
+              <span class="tag tag-blue">Session</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">28</div>
+            <div class="month">Mars</div>
+          </div>
+          <div class="event-info">
+            <h3>Kan ar Bobl</h3>
+            <p>Concours de chant, de contes, de musique et finale de danse qualificative pour Gourin.</p>
+            <div class="event-meta">
+              <span>🕑 14h–23h</span>
+              <span class="tag tag-gold">Compétition</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">10</div>
+            <div class="month">Avr.</div>
+          </div>
+          <div class="event-info">
+            <h3>The Green Spire</h3>
+            <p>Veillée musicale irlandaise en ambiance pub avec The Green Spire.</p>
+            <div class="event-meta">
+              <span>🕗 20h30</span>
+              <span class="tag tag-green">Concert</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">17</div>
+            <div class="month">Avr.</div>
+          </div>
+          <div class="event-info">
+            <h3>Kanomp holl !</h3>
+            <p>Karaoké breton festif — chantons tous ensemble !</p>
+            <div class="event-meta">
+              <span>🕗 20h30</span>
+              <span class="tag tag-gold">Soirée</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">18</div>
+            <div class="month">Avr.</div>
+          </div>
+          <div class="event-info">
+            <h3>Fest-noz étudiant</h3>
+            <p>Fest-noz spécial étudiants — danse et convivialité au programme.</p>
+            <div class="event-meta">
+              <span>🎉 Soirée</span>
+              <span class="tag tag-green">Fest-noz</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="day">16</div>
+            <div class="month">Mai</div>
+          </div>
+          <div class="event-info">
+            <h3>Grand Fest-noz</h3>
+            <p>Dans le cadre de la 18e Fête de la Bretagne — un grand fest-noz à ne pas manquer !</p>
+            <div class="event-meta">
+              <span>🎊 Grand événement</span>
+              <span class="tag tag-green">Fest-noz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <a href="agenda.html" class="btn btn-primary">Voir l'agenda complet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section--sm" style="padding:0 0 96px">
+    <div class="container">
+      <div class="quote-block">
+        <p class="quote-text">
+          "La culture n'est rien sans la rencontre de l'autre et sans l'échange, le partage, la convivialité."
+        </p>
+        <span class="quote-author">— Philosophie de la Mission Bretonne, depuis 1947</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNIÈRE -->
+  <div class="banner-cta">
+    <div class="container">
+      <h2>Rejoignez la Mission Bretonne</h2>
+      <p>Adhérez dès 20€ par an et profitez de tous les ateliers, événements et tarifs préférentiels.</p>
+      <div class="actions">
+        <a href="adhesion.html" class="btn btn-primary">S'inscrire · Tarifs 2025–2026</a>
+        <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">Mission Bretonne</span>
+          <span class="brand-sub">Ti ar Vretoned · Depuis 1947</span>
+          <p>Lieu d'accueil, de convivialité, de culture et de fête. La Mission Bretonne œuvre depuis plus de 75 ans pour la diffusion de la culture bretonne à Paris.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="Facebook">f</a>
+            <a href="#" class="social-link" title="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>L'association</h4>
+          <ul>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="presentation.html#histoire">Histoire</a></li>
+            <li><a href="presentation.html#ca">Conseil d'Administration</a></li>
+            <li><a href="adhesion.html">Adhérer & Soutenir</a></li>
+            <li><a href="adhesion.html#don">Faire un don</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ateliers & Événements</h4>
+          <ul>
+            <li><a href="ateliers.html">Tous les ateliers</a></li>
+            <li><a href="ateliers.html#musique">Musique</a></li>
+            <li><a href="ateliers.html#danse">Danse</a></li>
+            <li><a href="ateliers.html#langue">Langue bretonne</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Infos pratiques</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#acces">Accès · 22 rue Delambre</a></li>
+            <li><a href="contact.html">Newsletter</a></li>
+            <li><a href="#">Espace adhérents</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mission Bretonne – Ti ar Vretoned · 22 rue Delambre, 75014 Paris · 01 43 35 26 41</span>
+        <span>Pôle associé <a href="#">Dastum</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    // Mobile menu
+    function toggleMenu() {
+      document.body.classList.toggle('nav-mobile-open');
+    }
+  </script>
+</body>
+</html>

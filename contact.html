@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Accès — Mission Bretonne · Ti ar Vretoned</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .transport-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .transport-item:last-child { border-bottom: none; }
+    .metro-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+    .line-4  { background: #A0006E; }
+    .line-6  { background: #76B82A; }
+    .line-12 { background: #007852; }
+    .line-13 { background: #99D4DE; color: #333; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="brand">Mission Bretonne</span>
+      <span class="brand-sub">Ti ar Vretoned · Paris</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="presentation.html">L'association</a></li>
+      <li><a href="ateliers.html">Ateliers</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="adhesion.html">Adhérer</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="adhesion.html" class="btn btn-primary nav-cta" style="margin-left:8px">S'inscrire</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background:linear-gradient(135deg,rgba(28,43,74,.95) 0%,rgba(28,74,60,.7) 100%),url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1400&q=80') center/cover no-repeat"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="eyebrow">22 rue Delambre · Paris 14e</div>
+        <h1>Contact & Accès</h1>
+        <p>Au fond d'une cour intérieure, près de Montparnasse — un lieu discret et chaleureux.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PRINCIPAL -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFOS -->
+        <div>
+          <span style="color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:12px">Nous trouver</span>
+          <h2 style="color:var(--navy);margin-bottom:20px">Venez nous rendre visite</h2>
+          <p style="color:var(--text-light);margin-bottom:36px;line-height:1.8">
+            La Mission Bretonne se trouve au fond d'une cour intérieure, en face de l'extrémité du square Delambre.
+            Un lieu discret, mais vous serez guidé par les sons de la bombarde !
+          </p>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h4>Adresse</h4>
+              <p>22 rue Delambre<br>75014 Paris<br><em style="font-size:.82rem;color:var(--text-light)">Au fond de la cour intérieure</em></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <h4>Téléphone</h4>
+              <p><a href="tel:0143352641" style="color:var(--navy);font-weight:600">01 43 35 26 41</a></p>
+              <p style="font-size:.82rem;color:var(--text-light);margin-top:4px">En cas d'oubli du code d'accès, appelez ce numéro.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🔐</div>
+            <div>
+              <h4>Code d'accès</h4>
+              <p style="color:var(--text-light);font-size:.9rem">Un code est nécessaire pour accéder à l'immeuble. Contactez-nous pour l'obtenir.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🤫</div>
+            <div>
+              <h4>Discrétion demandée</h4>
+              <p style="color:var(--text-light);font-size:.9rem">Pour préserver la tranquillité des voisins, merci d'être discret en traversant la cour (pas de cigarette, de conversations bruyantes ni de téléphone).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="contact-form">
+          <h3 style="color:var(--navy);margin-bottom:8px;font-size:1.3rem">Écrivez-nous</h3>
+          <p style="color:var(--text-light);font-size:.88rem;margin-bottom:28px">Une question sur les ateliers, les tarifs ou les événements ? On vous répond rapidement.</p>
+
+          <form onsubmit="return false">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" placeholder="Votre prénom" />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Votre nom" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="sujet">Sujet</label>
+              <select id="sujet">
+                <option value="">Choisir un sujet…</option>
+                <option>Inscription à un atelier</option>
+                <option>Informations sur les tarifs</option>
+                <option>Événements & agenda</option>
+                <option>Adhésion & don</option>
+                <option>Bénévolat</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" placeholder="Votre message…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Envoyer le message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCÈS TRANSPORTS -->
+  <section class="section section--cream" id="acces">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Comment venir</span>
+        <h2>Accès & Transports</h2>
+        <p>Idéalement desservi par les transports en commun. Gare Montparnasse à 5 minutes à pied.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <!-- METRO -->
+          <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-sm)">
+            <h3 style="color:var(--navy);margin-bottom:20px;font-size:1.1rem;display:flex;align-items:center;gap:10px">
+              🚇 Métro
+            </h3>
+            <div class="transport-item">
+              <span class="metro-badge line-4">4</span>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy)">Vavin</strong>
+                <span style="color:var(--text-light);font-size:.82rem;margin-left:8px">5 min à pied</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <span class="metro-badge line-6">6</span>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy)">Edgar Quinet</strong>
+                <span style="color:var(--text-light);font-size:.82rem;margin-left:8px">3 min à pied</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <span class="metro-badge line-12">12</span>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy)">Montparnasse–Bienvenüe</strong>
+                <span style="color:var(--text-light);font-size:.82rem;margin-left:8px">7 min à pied</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <span class="metro-badge line-13">13</span>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy)">Gaîté</strong>
+                <span style="color:var(--text-light);font-size:.82rem;margin-left:8px">4 min à pied</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRAIN -->
+          <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-sm)">
+            <h3 style="color:var(--navy);margin-bottom:16px;font-size:1.1rem">🚆 Train & RER</h3>
+            <div class="transport-item">
+              <span style="font-size:1.3rem">🏢</span>
+              <div>
+                <strong style="font-size:.9rem;color:var(--navy)">Gare Montparnasse</strong>
+                <span style="color:var(--text-light);font-size:.82rem;display:block;margin-top:2px">Toutes lignes · 8 min à pied</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <!-- PLAN TEXTUEL -->
+          <div style="background:var(--navy);border-radius:var(--radius-md);padding:36px;color:white">
+            <h3 style="color:var(--gold);margin-bottom:16px;font-size:1.1rem">📍 Comment trouver l'entrée</h3>
+            <ol style="display:flex;flex-direction:column;gap:14px;padding-left:0;counter-reset:steps">
+              <li style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:28px;height:28px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">1</span>
+                <span style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.6">Rejoignez la <strong style="color:white">rue Delambre</strong> depuis le boulevard du Montparnasse ou Edgar Quinet.</span>
+              </li>
+              <li style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:28px;height:28px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">2</span>
+                <span style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.6">Cherchez le <strong style="color:white">n°22</strong>, en face de l'extrémité du square Delambre.</span>
+              </li>
+              <li style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:28px;height:28px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">3</span>
+                <span style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.6">Entrez le <strong style="color:white">code d'accès</strong> sur le digicode (contactez-nous pour l'obtenir).</span>
+              </li>
+              <li style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:28px;height:28px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">4</span>
+                <span style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.6">Traversez la cour intérieure <strong style="color:white">discrètement</strong> — la Mission est au fond.</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- PARKING & INFOS -->
+          <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-sm)">
+            <h3 style="color:var(--navy);margin-bottom:16px;font-size:1.1rem">🚗 Voiture & Stationnement</h3>
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.75;margin-bottom:16px">
+              Le stationnement de rue est difficile dans ce quartier animé. Nous recommandons vivement
+              les transports en commun.
+            </p>
+            <p style="color:var(--text-light);font-size:.9rem;line-height:1.75">
+              Des parkings payants sont disponibles près de la gare Montparnasse et sur le boulevard du Montparnasse.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section--dark">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+        <div>
+          <span style="color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:12px">Restez informés</span>
+          <h2 style="color:var(--white);margin-bottom:16px">Newsletter</h2>
+          <p style="color:rgba(255,255,255,.65);line-height:1.8">
+            Recevez le programme des événements, les nouveautés des ateliers et les actualités
+            de la Mission Bretonne directement dans votre boîte mail.
+          </p>
+        </div>
+        <div>
+          <form onsubmit="return false" style="display:flex;flex-direction:column;gap:16px">
+            <div class="form-row">
+              <div class="form-group" style="margin:0">
+                <label style="color:rgba(255,255,255,.6)">Prénom</label>
+                <input type="text" placeholder="Votre prénom" />
+              </div>
+              <div class="form-group" style="margin:0">
+                <label style="color:rgba(255,255,255,.6)">Nom</label>
+                <input type="text" placeholder="Votre nom" />
+              </div>
+            </div>
+            <div class="form-group" style="margin:0">
+              <label style="color:rgba(255,255,255,.6)">Email *</label>
+              <input type="email" placeholder="votre@email.com" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start">S'inscrire à la newsletter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand">Mission Bretonne</span>
+          <span class="brand-sub">Ti ar Vretoned · Depuis 1947</span>
+          <p>22 rue Delambre, 75014 Paris · 01 43 35 26 41</p>
+          <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>L'association</h4>
+          <ul>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="adhesion.html">Adhérer</a></li>
+            <li><a href="adhesion.html#don">Faire un don</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ateliers & Événements</h4>
+          <ul>
+            <li><a href="ateliers.html">Tous les ateliers</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Infos pratiques</h4>
+          <ul>
+            <li><a href="#acces">Accès</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Espace adhérents</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mission Bretonne – Ti ar Vretoned · 22 rue Delambre, 75014 Paris</span>
+        <span>Pôle associé <a href="#">Dastum</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+    function toggleMenu() { document.body.classList.toggle('nav-mobile-open'); }
+  </script>
+</body>
+</html>
