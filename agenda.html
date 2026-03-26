@@ -6,109 +6,36 @@
   <title>Agenda — Mission Bretonne · Ti ar Vretoned</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .month-label {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin: 48px 0 24px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .month-label::before {
-      content: '';
-      display: block;
-      width: 8px; height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-    }
-    .events-list { display: flex; flex-direction: column; gap: 16px; }
     .event-row {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      display: grid;
-      grid-template-columns: 80px 1fr auto;
-      align-items: center;
-      gap: 24px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      border-left: 4px solid transparent;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-bottom:none;
+      padding:22px 28px;
+      display:grid;
+      grid-template-columns:72px 1fr auto;
+      align-items:center;
+      gap:20px;
+      transition:var(--transition);
     }
-    .event-row:hover {
-      transform: translateX(4px);
-      box-shadow: var(--shadow-md);
-      border-left-color: var(--gold);
-    }
-    .event-row .date-block {
-      text-align: center;
-    }
-    .event-row .date-block .day {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-    }
-    .event-row .date-block .weekday {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      margin-top: 2px;
-    }
-    .event-row h3 {
-      font-size: 1rem;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .event-row p {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      line-height: 1.5;
-    }
-    .event-row .event-time {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin-top: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .filter-bar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-    .filter-btn {
-      padding: 8px 18px;
-      border-radius: 24px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1.5px solid var(--border);
-      background: var(--white);
-      color: var(--text-light);
-      transition: var(--transition);
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
+    .event-row:last-child { border-bottom:1px solid var(--border); }
+    .event-row:hover { background:var(--off-white); border-left:3px solid var(--black); padding-left:25px; }
+    .event-row .date-block { text-align:center; }
+    .event-row .date-block .day { font-family:var(--font-serif); font-size:1.8rem; font-weight:900; color:var(--black); line-height:1; }
+    .event-row .date-block .weekday { font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray-light); margin-top:3px; }
+    .event-row h3 { font-size:.95rem; color:var(--black); margin-bottom:4px; }
+    .event-row p { font-size:.83rem; color:var(--gray); line-height:1.5; }
+    .event-row .time { font-size:.75rem; color:var(--gray-light); margin-top:6px; display:flex; align-items:center; gap:6px; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="navbar scrolled" id="navbar">
     <a href="index.html" class="nav-logo">
-      <span class="brand">Mission Bretonne</span>
-      <span class="brand-sub">Ti ar Vretoned · Paris</span>
+      <img src="https://www.missionbretonne.bzh/wp-content/uploads/2011/06/LOGO-MISSION-e1308867355615.jpg" alt="Logo" />
+      <div class="nav-logo-text">
+        <span class="brand">Mission Bretonne</span>
+        <span class="brand-sub">Ti ar Vretoned · Paris</span>
+      </div>
     </a>
     <ul class="nav-links">
       <li><a href="presentation.html">L'association</a></li>
@@ -116,294 +43,186 @@
       <li><a href="agenda.html" class="active">Agenda</a></li>
       <li><a href="adhesion.html">Adhérer</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="adhesion.html" class="btn btn-primary nav-cta" style="margin-left:8px">S'inscrire</a></li>
+      <li><a href="adhesion.html" class="btn btn-primary nav-cta">S'inscrire</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </nav>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero-bg" style="background:linear-gradient(135deg,rgba(28,43,74,.95) 0%,rgba(45,74,112,.75) 100%),url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1400&q=80') center/cover no-repeat"></div>
+    <img class="page-hero-img"
+      src="https://www.missionbretonne.bzh/wp-content/uploads/2023/12/couv-mission-Copie-1520x525.jpg"
+      alt="Événements Mission Bretonne" />
+    <div class="page-hero-overlay"></div>
     <div class="container">
       <div class="page-hero-content">
-        <div class="eyebrow">Calendrier 2026</div>
+        <span class="eyebrow">Calendrier 2026</span>
         <h1>Agenda</h1>
-        <p>Sessions, fest-noz, concerts, stages et repas — la vie ne s'arrête jamais à la Mission.</p>
+        <p>Sessions, fest-noz, concerts, stages et repas — la vie ne s'arrête jamais.</p>
       </div>
     </div>
   </section>
+  <div class="gwenn-ha-du"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
-  <!-- FEATURED EVENTS -->
-  <section class="section--sm section--cream" style="padding:48px 0">
+  <!-- ÉVÉNEMENTS VEDETTES -->
+  <section style="padding:64px 0;background:var(--off-white);border-bottom:1px solid var(--border)">
     <div class="container">
-      <div class="grid-3">
-        <div style="background:var(--navy);border-radius:var(--radius-md);padding:32px;color:white;position:relative;overflow:hidden">
-          <div style="position:absolute;top:-20px;right:-20px;font-size:6rem;opacity:.08">🎊</div>
-          <span class="tag" style="background:var(--gold);color:var(--navy);margin-bottom:16px;display:inline-block">À venir</span>
-          <div style="font-family:var(--font-serif);font-size:.85rem;color:var(--gold);margin-bottom:6px">28 Mars · 14h–23h</div>
-          <h3 style="color:white;margin-bottom:8px">Kan ar Bobl</h3>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.6">Concours de chant, de contes et de musique. Finale de danse qualificative pour Gourin.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)">
+
+        <div style="background:var(--black);padding:36px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:-30px;right:-20px;font-size:7rem;opacity:.05;font-family:var(--font-serif);font-weight:900">28</div>
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">28 Mars · 14h–23h</div>
+          <h3 style="color:var(--white);margin-bottom:8px">Kan ar Bobl</h3>
+          <p style="color:rgba(255,255,255,.55);font-size:.88rem;line-height:1.6">Concours de chant, de contes et de musique. Finale de danse qualificative pour Gourin.</p>
+          <div style="margin-top:20px"><span class="tag tag-outline" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.4)">Compétition</span></div>
         </div>
-        <div style="background:var(--white);border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-md);position:relative;overflow:hidden">
-          <div style="position:absolute;top:-20px;right:-20px;font-size:6rem;opacity:.05">🎪</div>
-          <span class="tag tag-green" style="margin-bottom:16px;display:inline-block">Mai 2026</span>
-          <div style="font-family:var(--font-serif);font-size:.85rem;color:var(--gold);margin-bottom:6px">14–24 Mai</div>
-          <h3 style="color:var(--navy);margin-bottom:8px">18e Fête de la Bretagne</h3>
-          <p style="color:var(--text-light);font-size:.88rem;line-height:1.6">Grande célébration bretonne en Île-de-France, avec Crêp'Noz et Grand Fest-noz.</p>
+
+        <div style="background:var(--white);padding:36px">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-light);margin-bottom:10px">14–24 Mai</div>
+          <h3 style="color:var(--black);margin-bottom:8px">18e Fête de la Bretagne</h3>
+          <p style="color:var(--gray);font-size:.88rem;line-height:1.6">Grande célébration bretonne en Île-de-France avec Crêp'Noz et Grand Fest-noz.</p>
+          <div style="margin-top:20px"><span class="tag tag-dark">Grand événement</span></div>
         </div>
-        <div style="background:var(--gold-pale);border-radius:var(--radius-md);padding:32px;position:relative;overflow:hidden">
-          <div style="position:absolute;top:-20px;right:-20px;font-size:6rem;opacity:.08">🎶</div>
-          <span class="tag tag-blue" style="margin-bottom:16px;display:inline-block">Régulier</span>
-          <div style="font-family:var(--font-serif);font-size:.85rem;color:var(--navy);margin-bottom:6px">Dernier vendredi du mois</div>
-          <h3 style="color:var(--navy);margin-bottom:8px">Session Bretonne</h3>
-          <p style="color:var(--text-light);font-size:.88rem;line-height:1.6">Session musicale informelle ouverte à tous les musiciens chaque mois.</p>
+
+        <div style="background:var(--off-white);padding:36px;border:1px solid var(--border)">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-light);margin-bottom:10px">Dernier vendredi du mois</div>
+          <h3 style="color:var(--black);margin-bottom:8px">Session Bretonne</h3>
+          <p style="color:var(--gray);font-size:.88rem;line-height:1.6">Session musicale informelle ouverte à tous les musiciens chaque mois.</p>
+          <div style="margin-top:20px"><span class="tag tag-outline">Régulier</span></div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CALENDRIER -->
+  <!-- CALENDRIER DÉTAILLÉ -->
   <section class="section">
     <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap;gap:24px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:20px">
         <div>
-          <span style="color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px">Programme complet</span>
-          <h2 style="color:var(--navy)">Mars → Juin 2026</h2>
+          <span class="eyebrow" style="display:block;margin-bottom:10px">Programme complet</span>
+          <h2 style="color:var(--black)">Mars → Juin 2026</h2>
         </div>
         <div class="filter-bar">
           <button class="filter-btn active">Tous</button>
-          <button class="filter-btn">🎵 Sessions</button>
-          <button class="filter-btn">💃 Fest-noz</button>
-          <button class="filter-btn">🎤 Concerts</button>
-          <button class="filter-btn">🗣️ Stages</button>
-          <button class="filter-btn">🍽️ Repas</button>
+          <button class="filter-btn">Sessions</button>
+          <button class="filter-btn">Fest-noz</button>
+          <button class="filter-btn">Concerts</button>
+          <button class="filter-btn">Stages</button>
         </div>
       </div>
 
       <!-- MARS -->
       <div class="month-label">Mars 2026</div>
-      <div class="events-list">
+      <div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">27</div>
-            <div class="weekday">Vendredi</div>
-          </div>
-          <div>
-            <h3>Session Bretonne</h3>
-            <p>Séance musicale informelle ouverte à tous les musiciens et amateurs de musique bretonne.</p>
-            <div class="event-time">🕗 20h30 · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-blue">Session</span>
+          <div class="date-block"><div class="day">27</div><div class="weekday">Ven.</div></div>
+          <div><h3>Session Bretonne</h3><p>Séance musicale informelle ouverte à tous les musiciens et amateurs.</p><div class="time">🕗 20h30 · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Session</span>
         </div>
-        <div class="event-row" style="border-left-color:var(--gold)">
-          <div class="date-block">
-            <div class="day">28</div>
-            <div class="weekday">Samedi</div>
-          </div>
-          <div>
-            <h3>Kan ar Bobl — Île-de-France</h3>
-            <p>Concours de chant, de contes et de musique bretonne. Finale de danse — épreuve qualificative pour le concours de Gourin.</p>
-            <div class="event-time">🕑 14h–23h · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-gold">Compétition</span>
+        <div class="event-row" style="background:var(--off-white)">
+          <div class="date-block"><div class="day">28</div><div class="weekday">Sam.</div></div>
+          <div><h3>Kan ar Bobl — Île-de-France</h3><p>Concours de chant, de contes et de musique bretonne. Finale de danse — qualificative pour Gourin.</p><div class="time">🕑 14h–23h · 22 rue Delambre</div></div>
+          <span class="tag tag-dark">Compétition</span>
         </div>
       </div>
 
       <!-- AVRIL -->
       <div class="month-label">Avril 2026</div>
-      <div class="events-list">
+      <div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">4</div>
-            <div class="weekday">Samedi</div>
-          </div>
-          <div>
-            <h3>Découverte de la nature bretonne</h3>
-            <p>Atelier en langue bretonne avec Christine Le Menn — découvrir la faune et la flore de Bretagne en breton.</p>
-            <div class="event-time">🕒 15h–18h · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-green">Langue</span>
+          <div class="date-block"><div class="day">4</div><div class="weekday">Sam.</div></div>
+          <div><h3>Découverte de la nature bretonne en breton</h3><p>Atelier avec Christine Le Menn — faune et flore de Bretagne en langue bretonne.</p><div class="time">🕒 15h–18h · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Langue</span>
         </div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">10</div>
-            <div class="weekday">Vendredi</div>
-          </div>
-          <div>
-            <h3>The Green Spire — Veillée irlandaise</h3>
-            <p>Soirée musicale irlandaise en ambiance pub avec le groupe The Green Spire. Musiques et chants d'Irlande.</p>
-            <div class="event-time">🕗 20h30 · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-green">Concert</span>
+          <div class="date-block"><div class="day">10</div><div class="weekday">Ven.</div></div>
+          <div><h3>The Green Spire — Veillée irlandaise</h3><p>Soirée musicale irlandaise en ambiance pub avec le groupe The Green Spire.</p><div class="time">🕗 20h30 · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Concert</span>
+        </div>
+        <div class="event-row" style="background:var(--off-white)">
+          <div class="date-block"><div class="day">11</div><div class="weekday">Sam.</div></div>
+          <div><h3>Stage de langue bretonne</h3><p>Stage intensif d'une journée pour progresser en breton — tous niveaux.</p><div class="time">📅 Journée entière</div></div>
+          <span class="tag tag-dark">Stage</span>
         </div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">11</div>
-            <div class="weekday">Samedi</div>
-          </div>
-          <div>
-            <h3>Stage de langue bretonne</h3>
-            <p>Stage intensif d'une journée pour progresser rapidement en breton — tous niveaux.</p>
-            <div class="event-time">📅 Journée entière · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-gold">Stage</span>
+          <div class="date-block"><div class="day">14</div><div class="weekday">Mar.</div></div>
+          <div><h3>Repas en breton — Crêperie Ty Breizh</h3><p>Repas convivial en langue bretonne à la crêperie Ty Breizh.</p><div class="time">🍽️ Déjeuner</div></div>
+          <span class="tag tag-outline">Repas</span>
+        </div>
+        <div class="event-row" style="background:var(--off-white)">
+          <div class="date-block"><div class="day">17</div><div class="weekday">Ven.</div></div>
+          <div><h3>Kanomp holl ! — Karaoké breton</h3><p>Soirée karaoké en breton — chantons tous ensemble les grands classiques !</p><div class="time">🕗 20h30 · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Soirée</span>
         </div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">14</div>
-            <div class="weekday">Mardi</div>
-          </div>
-          <div>
-            <h3>Repas en breton — Crêperie Ty Breizh</h3>
-            <p>Repas convivial en langue bretonne à la crêperie Ty Breizh. Parler, manger, échanger.</p>
-            <div class="event-time">🍽️ Déjeuner · Crêperie Ty Breizh</div>
-          </div>
-          <span class="tag tag-blue">Repas</span>
+          <div class="date-block"><div class="day">18</div><div class="weekday">Sam.</div></div>
+          <div><h3>Fest-noz étudiant</h3><p>Fest-noz spécial étudiants — danse bretonne dans une ambiance festive.</p><div class="time">🎉 Soirée · 22 rue Delambre</div></div>
+          <span class="tag tag-dark">Fest-noz</span>
         </div>
-        <div class="event-row">
-          <div class="date-block">
-            <div class="day">17</div>
-            <div class="weekday">Vendredi</div>
-          </div>
-          <div>
-            <h3>Kanomp holl ! — Karaoké breton</h3>
-            <p>Soirée karaoké en breton — chantons tous ensemble les grands classiques de la musique bretonne.</p>
-            <div class="event-time">🕗 20h30 · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-gold">Soirée</span>
-        </div>
-        <div class="event-row">
-          <div class="date-block">
-            <div class="day">18</div>
-            <div class="weekday">Samedi</div>
-          </div>
-          <div>
-            <h3>Fest-noz étudiant</h3>
-            <p>Fest-noz spécial étudiants — danse bretonne dans une ambiance festive et décontractée.</p>
-            <div class="event-time">🎉 Soirée · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-green">Fest-noz</span>
-        </div>
-        <div class="event-row">
-          <div class="date-block">
-            <div class="day">24</div>
-            <div class="weekday">Vendredi</div>
-          </div>
-          <div>
-            <h3>Session Bretonne</h3>
-            <p>Session musicale informelle mensuelle, ouverte à tous les instrumentistes.</p>
-            <div class="event-time">🕗 20h30 · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-blue">Session</span>
+        <div class="event-row" style="background:var(--off-white)">
+          <div class="date-block"><div class="day">24</div><div class="weekday">Ven.</div></div>
+          <div><h3>Session Bretonne</h3><p>Session musicale mensuelle — tous instrumentistes bienvenus.</p><div class="time">🕗 20h30 · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Session</span>
         </div>
       </div>
 
       <!-- MAI -->
       <div class="month-label">Mai 2026</div>
-      <div class="events-list">
+      <div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">12</div>
-            <div class="weekday">Mardi</div>
-          </div>
-          <div>
-            <h3>Repas breton mensuel</h3>
-            <p>Repas convivial mensuel en langue bretonne. Un moment de partage autour de la table.</p>
-            <div class="event-time">🍽️ Midi · Lieu à confirmer</div>
-          </div>
-          <span class="tag tag-blue">Repas</span>
+          <div class="date-block"><div class="day">12</div><div class="weekday">Mar.</div></div>
+          <div><h3>Repas breton mensuel</h3><p>Repas convivial mensuel en langue bretonne.</p><div class="time">🍽️ Midi</div></div>
+          <span class="tag tag-outline">Repas</span>
         </div>
-        <div class="event-row" style="border-left-color:var(--gold)">
-          <div class="date-block">
-            <div class="day">14</div>
-            <div class="weekday">Jeudi</div>
-          </div>
-          <div>
-            <h3>Crêp'Noz — Fête de la Bretagne</h3>
-            <p>Festival de rue avec fest-deiz l'après-midi et fest-noz le soir. Dans le cadre de la 18e Fête de la Bretagne en Île-de-France.</p>
-            <div class="event-time">☀️ Après-midi + 🌙 Soir · En extérieur</div>
-          </div>
-          <span class="tag tag-green">Fest-deiz / Noz</span>
+        <div class="event-row" style="background:var(--off-white)">
+          <div class="date-block"><div class="day">14</div><div class="weekday">Jeu.</div></div>
+          <div><h3>Crêp'Noz — Fête de la Bretagne</h3><p>Festival de rue avec fest-deiz et fest-noz. 18e Fête de la Bretagne en Île-de-France.</p><div class="time">☀️ Après-midi + 🌙 Soir · En extérieur</div></div>
+          <span class="tag tag-dark">Fest-deiz/Noz</span>
         </div>
-        <div class="event-row" style="border-left-color:var(--gold)">
-          <div class="date-block">
-            <div class="day">16</div>
-            <div class="weekday">Samedi</div>
-          </div>
-          <div>
-            <h3>Grand Fest-noz — Fête de la Bretagne</h3>
-            <p>Le grand fest-noz de la saison ! Dans le cadre de la 18e édition de la Fête de la Bretagne. Musiciens, danseurs, convivialité.</p>
-            <div class="event-time">🎊 Grand événement · Lieu à confirmer</div>
-          </div>
-          <span class="tag tag-gold">Grand Fest-noz</span>
+        <div class="event-row">
+          <div class="date-block"><div class="day">16</div><div class="weekday">Sam.</div></div>
+          <div><h3>Grand Fest-noz — Fête de la Bretagne</h3><p>Le grand fest-noz de la saison — 18e édition. Musiciens, danseurs, convivialité.</p><div class="time">🎊 Grand événement</div></div>
+          <span class="tag tag-dark">Grand Fest-noz</span>
         </div>
       </div>
 
       <!-- JUIN -->
       <div class="month-label">Juin 2026</div>
-      <div class="events-list">
+      <div>
         <div class="event-row">
-          <div class="date-block">
-            <div class="day">7</div>
-            <div class="weekday">Dimanche</div>
-          </div>
-          <div>
-            <h3>Fest-deiz de fin de saison</h3>
-            <p>Fest-deiz de clôture avec les musiciens Blain-Leyzour et Régis Huiban. La fête de fin d'année des ateliers.</p>
-            <div class="event-time">☀️ Après-midi · 22 rue Delambre</div>
-          </div>
-          <span class="tag tag-green">Fest-deiz</span>
+          <div class="date-block"><div class="day">7</div><div class="weekday">Dim.</div></div>
+          <div><h3>Fest-deiz de fin de saison</h3><p>Avec les musiciens Blain-Leyzour et Régis Huiban. Fête de fin d'année des ateliers.</p><div class="time">☀️ Après-midi · 22 rue Delambre</div></div>
+          <span class="tag tag-outline">Fest-deiz</span>
         </div>
       </div>
 
       <!-- NEWSLETTER -->
-      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:48px;text-align:center;margin-top:64px">
-        <h3 style="color:var(--white);margin-bottom:12px">Ne manquez aucun événement</h3>
-        <p style="color:rgba(255,255,255,.65);margin-bottom:28px;font-size:.95rem">Inscrivez-vous à la newsletter pour recevoir le programme directement dans votre boîte mail.</p>
-        <form style="display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap" onsubmit="return false">
-          <input type="email" placeholder="votre@email.com" style="flex:1;min-width:200px" />
-          <button type="submit" class="btn btn-primary">S'inscrire</button>
+      <div style="background:var(--black);padding:48px;text-align:center;margin-top:64px">
+        <h3 style="color:var(--white);margin-bottom:10px">Ne manquez aucun événement</h3>
+        <p style="color:rgba(255,255,255,.5);margin-bottom:28px;font-size:.9rem">Inscrivez-vous à la newsletter pour recevoir le programme dans votre boîte mail.</p>
+        <form style="display:flex;gap:0;max-width:480px;margin:0 auto" onsubmit="return false">
+          <input type="email" placeholder="votre@email.com" style="flex:1;border-right:none" />
+          <button type="submit" class="btn btn-outline" style="white-space:nowrap;padding:13px 24px">S'inscrire</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="brand">Mission Bretonne</span>
-          <span class="brand-sub">Ti ar Vretoned · Depuis 1947</span>
-          <p>22 rue Delambre, 75014 Paris · 01 43 35 26 41</p>
-          <div class="social-links">
-            <a href="#" class="social-link">f</a>
-            <a href="#" class="social-link">▶</a>
+          <div class="footer-logo">
+            <img src="https://www.missionbretonne.bzh/wp-content/uploads/2011/06/LOGO-MISSION-e1308867355615.jpg" alt="Logo" />
+            <div><span class="brand">Mission Bretonne</span><span class="brand-sub">Ti ar Vretoned · Depuis 1947</span></div>
           </div>
+          <p>22 rue Delambre, 75014 Paris · 01 43 35 26 41</p>
+          <div class="social-links"><a href="#" class="social-link">f</a><a href="#" class="social-link">▶</a></div>
         </div>
-        <div class="footer-col">
-          <h4>L'association</h4>
-          <ul>
-            <li><a href="presentation.html">Présentation</a></li>
-            <li><a href="adhesion.html">Adhérer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Ateliers</h4>
-          <ul>
-            <li><a href="ateliers.html">Tous les ateliers</a></li>
-            <li><a href="ateliers.html#musique">Musique</a></li>
-            <li><a href="ateliers.html#danse">Danse</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Nous écrire</a></li>
-            <li><a href="contact.html#acces">Accès</a></li>
-            <li><a href="#">Mentions légales</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h4>L'association</h4><ul><li><a href="presentation.html">Présentation</a></li><li><a href="adhesion.html">Adhérer</a></li></ul></div>
+        <div class="footer-col"><h4>Ateliers</h4><ul><li><a href="ateliers.html">Tous les ateliers</a></li><li><a href="ateliers.html#musique">Musique</a></li><li><a href="ateliers.html#danse">Danse</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Nous écrire</a></li><li><a href="contact.html#acces">Accès</a></li><li><a href="#">Mentions légales</a></li></ul></div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 Mission Bretonne – Ti ar Vretoned · 22 rue Delambre, 75014 Paris</span>
@@ -411,7 +230,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     const nav = document.getElementById('navbar');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
